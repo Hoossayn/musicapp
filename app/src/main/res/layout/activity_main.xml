@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   tools:context=".MainActivity">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.5"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1.5"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/current_play"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="8dp"
+            android:background="@android:color/darker_gray">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/current_play"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="Aquilo"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="Blindside"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/prev_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/next_yellow" />
+
+        <ImageView
+            android:id="@+id/Play_button"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/prev_button"
+            android:src="@drawable/playbutton_yellow" />
+
+        <ImageView
+            android:id="@+id/next_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_toStartOf="@id/Play_button"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="135dp"
+            android:src="@drawable/previous_yellow" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
